@@ -3,6 +3,9 @@ vpath %.h ./src/
 
 CFLAGS=-Wextra -O3
 
+bfi.out: bfi.c brainfuck.o stack.o
+	cc -o $@ $^
+
 test_brainfuck.out: test/test_brainfuck.c brainfuck.o stack.o
 	cc -o $@ $^
 
